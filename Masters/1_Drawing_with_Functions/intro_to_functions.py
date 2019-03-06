@@ -54,6 +54,68 @@ def moon():
     arcade.draw_circle_outline(650, 450, 71, arcade.color.DARK_BLUE, 40)
     arcade.draw_circle_outline(650, 450, 77, arcade.color.DARK_BLUE, 40)
 
+def snowman():
+    arcade.draw_circle_filled(650, 200, 40, arcade.color.GHOST_WHITE)
+    arcade.draw_circle_filled(650, 240, 33.3, arcade.color.GHOST_WHITE)
+    arcade.draw_circle_filled(650, 280, 26.6, arcade.color.GHOST_WHITE)
+    arcade.draw_circle_filled(640, 287, 3.3, arcade.color.BLACK)
+    arcade.draw_circle_filled(660, 287, 3.3, arcade.color.BLACK)
+    arcade.draw_triangle_filled(650, 284, 650, 276, 630, 280, arcade.color.ORANGE)
+
+def snow():
+    arcade.draw_circle_filled(x, y, 3, arcade.color.WHITE)
+
+def on_draw(delta_time):
+    global snow1, snow2, snow3, snow4, snow5, snow6, snow7, snow8, snow9, snow10, snow11,snow12, snow13, snow14, snow15, snow16, snow17, snow18, snow19, snow20
+
+    arcade.start_render()
+
+
+    bridge()
+    grass()
+    river()
+    tree()
+    moon()
+    snowman()
+    snow(snow1, snow11)
+    snow(snow2, snow12)
+    snow(snow3, snow13)
+    snow(snow4, snow14)
+    snow(snow5, snow15)
+    snow(snow6, snow16)
+    snow(snow7, snow17)
+    snow(snow8, snow18)
+    snow(snow9, snow19)
+    snow(snow10, snow20)
+
+    snow1 -= 1
+    snow2 -= 1
+    snow3 -= 1
+    snow4 -= 1
+    snow5 -= 1
+    snow6 -= 1
+    snow7 -= 1
+    snow8 -= 1
+    snow9 -= 1
+    snow10 -= 1
+
+    snow11 -= 2
+    snow12 -= 2
+    snow13 -= 2
+    snow14 -= 2
+    snow15 -= 2
+    snow16 -= 2
+    snow17 -= 2
+    snow18 -= 2
+    snow19 -= 2
+    snow20 -= 2
+
+snow1 = 100
+snow2 = 150
+
+
+
+
 def main():
     arcade.open_window(SCREEN_WIDTH, SCREEN_HEIGHT, "Drawing with Functions")
     arcade.set_background_color(arcade.color.DARK_BLUE)
@@ -65,6 +127,8 @@ def main():
     river()
     tree()
     moon()
+    snowman()
+    snow()
 
     # Finish and run
     arcade.finish_render()
